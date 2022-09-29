@@ -8,19 +8,14 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import numpy as np
-import plotly.express as px
-import matplotlib.pyplot as plt
+#import plotly.express as px
+#import matplotlib.pyplot as plt
 from datetime import datetime
 import plotly.express as px
 import plotly.graph_objects as go
 #from plotly.offline import plot
 from dash import dcc
-import plotly.express as px
-from jupyter_dash import JupyterDash
-from dash import dcc
-from dash import html
-from dash.dependencies import Input, Output
-from dash.dependencies import Input, Output, State
+
 
 # In[3]:
 
@@ -60,7 +55,7 @@ fig.update_layout({'xaxis': {'title': {'text': 'Jaar'}},
                    'yaxis': {'title':{'text': 'Aantal vliegtuigongelukken'}},
                    'legend': {'title':{'text': 'Verloop van het aantal'}}})    
 fig.show()
-
+st.plotly_chart(fig)
 
 
 # In[9]:
@@ -83,7 +78,7 @@ fig.update_layout({'xaxis': {'title': {'text': 'Maand'}},
                    'yaxis': {'title':{'text': 'Aantal vliegtuigongelukken'}},
                    'legend': {'title':{'text': 'Aantal'}}})   
 fig.show()
-
+st.plotly_chart(fig)
 
 
 # In[11]:
